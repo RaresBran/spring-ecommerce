@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "9153ce8d-ef59-4f73-8580-0f25eb517466",
+		"name": "ecommerce_training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21092293"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"jane_doe\",\r\n  \"firstName\": \"Jane\",\r\n  \"lastName\": \"Doe\",\r\n  \"phone\": \"987-654-3210\",\r\n  \"address\": \"456 Elm St\",\r\n  \"city\": \"Townsville\",\r\n  \"postalCode\": \"54321\",\r\n  \"country\": \"Canada\",\r\n  \"orders\": [],\r\n  \"payments\": []\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"name\": \"Product 3\",\r\n    \"description\": \"Description for Product 3\",\r\n    \"stock\": 200,\r\n    \"price\": 19.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 4\",\r\n    \"description\": \"Description for Product 4\",\r\n    \"stock\": 75,\r\n    \"price\": 39.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 5\",\r\n    \"description\": \"Description for Product 5\",\r\n    \"stock\": 150,\r\n    \"price\": 59.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 6\",\r\n    \"description\": \"Description for Product 6\",\r\n    \"stock\": 120,\r\n    \"price\": 9.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 7\",\r\n    \"description\": \"Description for Product 7\",\r\n    \"stock\": 80,\r\n    \"price\": 69.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 8\",\r\n    \"description\": \"Description for Product 8\",\r\n    \"stock\": 300,\r\n    \"price\": 79.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 9\",\r\n    \"description\": \"Description for Product 9\",\r\n    \"stock\": 250,\r\n    \"price\": 89.99,\r\n    \"orderDetails\": []\r\n  },\r\n  {\r\n    \"name\": \"Product 10\",\r\n    \"description\": \"Description for Product 10\",\r\n    \"stock\": 180,\r\n    \"price\": 99.99,\r\n    \"orderDetails\": []\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/order-details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"quantity\": 1,\r\n        \"orderId\": 1,\r\n        \"productCode\": \"5761e97e-748b-4eeb-b94a-970a8e7eca95\"\r\n    },\r\n    {\r\n        \"quantity\": 2,\r\n        \"orderId\": 1,\r\n        \"productCode\": \"57712d74-c408-481f-ad72-c87cdfa94dc7\"\r\n    },\r\n    {\r\n        \"quantity\": 2,\r\n        \"orderId\": 1,\r\n        \"productCode\": \"6221d8f6-ae56-489b-8791-63e149353a76\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/john_doe/orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/john_doe/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"john_doe",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/customers/john_doe/address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/john_doe/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"john_doe",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
